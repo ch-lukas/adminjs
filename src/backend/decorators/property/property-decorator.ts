@@ -182,7 +182,8 @@ class PropertyDecorator {
    * @param {'list' | 'edit' | 'show' | 'filter'} where
    */
   isVisible(where: PropertyPlace): boolean {
-    if (typeof this.options.isVisible === 'object' && this.options.isVisible !== 'null') {
+    //if (typeof this.options.isVisible === 'object' && this.options.isVisible !== 'null') {
+    if (typeof this.options.isVisible === 'object') {
       return !!this.options.isVisible[where]
     }
     if (typeof this.options.isVisible === 'boolean') {
